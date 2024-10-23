@@ -1,0 +1,282 @@
+[
+    {
+        "id": 0,
+        "index": "0000001013",
+        "narrative": "Harlan laughed when Sofiya said she was too dependent on her parents. \"I don't need them to do everything for me,\" Harlan said. \"I can take care of myself.\"",
+        "speakers": [
+            "Harlan",
+            "Sofiya"
+        ],
+        "speaker_ids": [
+            "0000105990_0",
+            "0000471459_1"
+        ],
+        "behaviors": [
+            {
+                "utterance_length": 2,
+                "filler_words": 2,
+                "backchannels": 2,
+                "interruptions": 1
+            },
+            {
+                "utterance_length": 2,
+                "filler_words": 0,
+                "backchannels": 2,
+                "interruptions": 0
+            }
+        ],
+        "gt_audio_path": "SpokenSODA/GPT-4o-2024-08-06-test/audios/0000001013/dialogues/1_1.wav"
+    },
+    {
+        "id": 1,
+        "index": "0000001357",
+        "narrative": "Chastity is happy because he gets to go out with Tafari again. He really likes her and enjoys spending time with her. They always have a lot of fun together.",
+        "speakers": [
+            "Chastity",
+            "Tafari"
+        ],
+        "speaker_ids": [
+            "0000805189_1",
+            "0000810683_1"
+        ],
+        "behaviors": [
+            {
+                "utterance_length": 2,
+                "filler_words": 0,
+                "backchannels": 1,
+                "interruptions": 2
+            },
+            {
+                "utterance_length": 2,
+                "filler_words": 0,
+                "backchannels": 1,
+                "interruptions": 1
+            }
+        ],
+        "gt_audio_path": "SpokenSODA/GPT-4o-2024-08-06-test/audios/0000001357/dialogues/1_1.wav"
+    },
+    {
+        "id": 2,
+        "index": "0000001343",
+        "narrative": "Abbi promises Eamon not to fly because Abbi is afraid of flying.",
+        "speakers": [
+            "Abbi",
+            "Eamon"
+        ],
+        "speaker_ids": [
+            "0000169473_0",
+            "0001057378_1"
+        ],
+        "behaviors": [
+            {
+                "utterance_length": 1,
+                "filler_words": 1,
+                "backchannels": 2,
+                "interruptions": 0
+            },
+            {
+                "utterance_length": 0,
+                "filler_words": 0,
+                "backchannels": 0,
+                "interruptions": 2
+            }
+        ],
+        "gt_audio_path": "SpokenSODA/GPT-4o-2024-08-06-test/audios/0000001343/dialogues/1_1.wav"
+    },
+    {
+        "id": 3,
+        "index": "0000000434",
+        "narrative": "Alexandre sees that Derik got fired. He is talking to his friends about it and they are all upset. Alexandre is really mad because he was just talking to Derik yesterday.",
+        "speakers": [
+            "Alexandre",
+            "Derik"
+        ],
+        "speaker_ids": [
+            "0000840491_0",
+            "0000832118_0"
+        ],
+        "behaviors": [
+            {
+                "utterance_length": 1,
+                "filler_words": 2,
+                "backchannels": 2,
+                "interruptions": 2
+            },
+            {
+                "utterance_length": 2,
+                "filler_words": 1,
+                "backchannels": 0,
+                "interruptions": 0
+            }
+        ],
+        "gt_audio_path": "SpokenSODA/GPT-4o-2024-08-06-test/audios/0000000434/dialogues/1_1.wav"
+    },
+    {
+        "id": 4,
+        "index": "0000002944",
+        "narrative": "Raechel speaks to Collin's mother in order to get to know her better and to find out more about Collin. Raechel is interested in learning about what kind of person Collin comes from, and she feels that speaking with his mother will give her some insight.",
+        "speakers": [
+            "Raechel",
+            "Collin"
+        ],
+        "speaker_ids": [
+            "0000554397_1",
+            "0000418293_0"
+        ],
+        "behaviors": [
+            {
+                "utterance_length": 1,
+                "filler_words": 0,
+                "backchannels": 0,
+                "interruptions": 0
+            },
+            {
+                "utterance_length": 2,
+                "filler_words": 2,
+                "backchannels": 1,
+                "interruptions": 1
+            }
+        ],
+        "gt_audio_path": "SpokenSODA/GPT-4o-2024-08-06-test/audios/0000002944/dialogues/1_1.wav"
+    },
+    {
+        "id": 5,
+        "index": "0000003359",
+        "narrative": "Jory feels terrible that he has been such a terrible friend to Samarah. He wants to make things right and be a better friend from now on. To start, Jory apologizes to Samarah for his behavior and promises to do better.",
+        "speakers": [
+            "Jory",
+            "Samarah"
+        ],
+        "speaker_ids": [
+            "0000386823_1",
+            "0000169473_0"
+        ],
+        "behaviors": [
+            {
+                "utterance_length": 0,
+                "filler_words": 1,
+                "backchannels": 1,
+                "interruptions": 1
+            },
+            {
+                "utterance_length": 2,
+                "filler_words": 0,
+                "backchannels": 0,
+                "interruptions": 1
+            }
+        ],
+        "gt_audio_path": "SpokenSODA/GPT-4o-2024-08-06-test/audios/0000003359/dialogues/1_1.wav"
+    },
+    {
+        "id": 6,
+        "index": "0000000732",
+        "narrative": "Herschel would like to stay in Myron's house for the next few nights. Myron is happy to have her and shows her where she will be sleeping. Herschel is excited to have a place to stay and is grateful to Myron.",
+        "speakers": [
+            "Herschel",
+            "Myron"
+        ],
+        "speaker_ids": [
+            "0000858322_0",
+            "0000632604_0"
+        ],
+        "behaviors": [
+            {
+                "utterance_length": 1,
+                "filler_words": 2,
+                "backchannels": 2,
+                "interruptions": 1
+            },
+            {
+                "utterance_length": 1,
+                "filler_words": 2,
+                "backchannels": 0,
+                "interruptions": 1
+            }
+        ],
+        "gt_audio_path": "SpokenSODA/GPT-4o-2024-08-06-test/audios/0000000732/dialogues/1_1.wav"
+    },
+    {
+        "id": 7,
+        "index": "0000001482",
+        "narrative": "Markell was kind enough to invite Moishe to stay the night, even though Moishe was a complete stranger. Markell made sure that Moishe had everything they needed and even offered to make them breakfast in the morning.",
+        "speakers": [
+            "Markell",
+            "Moishe"
+        ],
+        "speaker_ids": [
+            "0000153035_1",
+            "0000701810_1"
+        ],
+        "behaviors": [
+            {
+                "utterance_length": 0,
+                "filler_words": 0,
+                "backchannels": 1,
+                "interruptions": 2
+            },
+            {
+                "utterance_length": 2,
+                "filler_words": 2,
+                "backchannels": 0,
+                "interruptions": 0
+            }
+        ],
+        "gt_audio_path": "SpokenSODA/GPT-4o-2024-08-06-test/audios/0000001482/dialogues/1_1.wav"
+    },
+    {
+        "id": 8,
+        "index": "0000002838",
+        "narrative": "Illiana and Jerred got into a fight because Jerred wouldn't let Illiana borrow his car. As punishment, Jerred made Illiana clean his room and do all the chores for a week.",
+        "speakers": [
+            "Illiana",
+            "Jerred"
+        ],
+        "speaker_ids": [
+            "0000632604_0",
+            "0000949502_1"
+        ],
+        "behaviors": [
+            {
+                "utterance_length": 2,
+                "filler_words": 2,
+                "backchannels": 1,
+                "interruptions": 0
+            },
+            {
+                "utterance_length": 0,
+                "filler_words": 1,
+                "backchannels": 0,
+                "interruptions": 2
+            }
+        ],
+        "gt_audio_path": "SpokenSODA/GPT-4o-2024-08-06-test/audios/0000002838/dialogues/1_1.wav"
+    },
+    {
+        "id": 9,
+        "index": "0000002802",
+        "narrative": "Derik wanted to pay Codi back for always being there for her, so she decided to take her out for dinner. Derik made reservations at Codi's favorite restaurant and even ordered her favorite dish. Codi was really touched by the gesture and appreciated it very much.",
+        "speakers": [
+            "Derik",
+            "Codi"
+        ],
+        "speaker_ids": [
+            "0000510247_1",
+            "0000840491_0"
+        ],
+        "behaviors": [
+            {
+                "utterance_length": 1,
+                "filler_words": 2,
+                "backchannels": 1,
+                "interruptions": 1
+            },
+            {
+                "utterance_length": 1,
+                "filler_words": 0,
+                "backchannels": 2,
+                "interruptions": 1
+            }
+        ],
+        "gt_audio_path": "SpokenSODA/GPT-4o-2024-08-06-test/audios/0000002802/dialogues/1_1.wav"
+    }
+]
