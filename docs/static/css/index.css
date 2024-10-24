@@ -133,5 +133,32 @@ body {
   font-size: smaller;
 }
 
+.narrative {
+  font-size: 1rem;  /* Adjust this size as needed */
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
 
+.behaviors-title {
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 1rem;  /* Adjust size as necessary */
+}
 
+.behaviors-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.behaviors-list ul {
+  list-style-type: circle;
+  margin-left: 1rem;
+}
+
+.results-carousel .item {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  font-size: 1rem;
+}

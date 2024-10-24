@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta name="description" content="Spoken dialogue systems and behaviorally-aware generation using large language models.">
+  <meta property="og:title" content="Behaviorally Aware Spoken Dialogue Generation"/>
+  <meta property="og:description" content="Introducing Behavior-SD and BeDLM to enhance natural conversational behaviors."/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
@@ -14,17 +14,17 @@
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <meta property="twitter:title" content="Behaviorally Aware Dialogue Systems">
+  <meta name="twitter:description" content="Advancing spoken dialogue systems by modeling conversational behaviors."/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="Spoken Dialogue Systems, Behavior-SD, BeDLM, LLMs, TTS, Conversational Models">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Behavior-SD</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,20 +52,19 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+            <h1 class="title is-1 publication-title">Behaviorally Aware <br> Spoken Dialogue Generation</h1>
+              <div class="is-size-5 publication-authors">
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                      <a href="https://yhytoto12.github.io/" target="_blank">Sehun Lee</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                      <a href="https://kwkim.me/" target="_blank">Kang-wook Kim</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                      <a href="https://vision.snu.ac.kr/gunhee/" target="_blank">Gunhee Kim</a>
                   </span>
-                  </div>
+              </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="author-block">Institution Name<br>Submitted to NAACL 2025</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -122,24 +121,6 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -148,7 +129,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Spoken dialogue systems often struggle with complex conversational behaviors such as turn-taking, interruptions, filler words, and backchannels, which are essential for natural and engaging human interactions. 
+However, existing spoken language models and datasets frequently fail to explicitly model these behavioral traits, leading to less natural and effective communication.
+To address this challenge, we make two key contributions.
+First, we introduce <strong>Behavior-SD</strong>, a large-scale dataset containing over 100K spoken dialogues (2,044 hours) annotated with various conversational behaviors, synthesized via LLMs to model diverse full-duplex interactions.
+Second, we propose <strong>BeDLM</strong>, the first dialogue model capable of generating natural conversations conditioned on specific behavioral and narrative contexts, supporting simultaneous contributions from both speakers.
+Through human evaluations and behavior-adherence metrics, we demonstrate that BeDLM outperforms baseline models in generating natural, coherent, and behaviorally rich dialogues.
+Our work opens new possibilities for developing behaviorally-aware dialogue systems that more closely mimic human conversational dynamics, enhancing user engagement and communication effectiveness.
           </p>
         </div>
       </div>
@@ -157,45 +144,303 @@
 </section>
 <!-- End paper abstract -->
 
-
+<script src="https://unpkg.com/wavesurfer.js"></script>
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <h2 class="title is-3">Samples from Behavior-SD</h2>
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+        <!-- Item 0 -->
+        <div class="item">
+          <!-- Waveform visualization for original speech -->
+          <div id="cell_0_original_waveform"></div>
+          <button id="cell_0_original" class="play-button-demo btn btn-primary" onclick="wavesurfer_cell_0_original.playPause()">
+              <i class="fa fa-play"></i>
+              Play
+              /
+              <i class="fa fa-pause"></i>
+              Pause
+          </button>
+          <script>
+              var wavesurfer_cell_0_original = WaveSurfer.create({
+                  container: '#cell_0_original_waveform',
+                  waveColor: 'violet',
+                  progressColor: 'purple',
+                  splitChannels: true,
+                  responsive: true,
+              });
+              wavesurfer_cell_0_original.load('static/audios/Behavior-SD_samples/0.wav');
+          </script>
+
+          <!-- Narrative -->
+          <h2 class="subtitle has-text-centered">
+            Narrative: Harlan laughed when Sofiya said she was too dependent on her parents. "I don't need them to do everything for me," Harlan said. "I can take care of myself."
+          </h2>
+          <!-- Behaviors -->
+          <p>Behaviors:</p>
+          <table class="table is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th>Speaker</th>
+                <th>Utterance Length</th>
+                <th>Filler Words</th>
+                <th>Backchannels</th>
+                <th>Interruptions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Harlan</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Sofiya</td>
+                <td>2</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Item 2 -->
+<div class="item">
+  <!-- Waveform visualization for original speech -->
+  <div id="cell_2_original_waveform"></div>
+  <button id="cell_2_original" class="play-button-demo btn btn-primary" onclick="wavesurfer_cell_2_original.playPause()">
+      <i class="fa fa-play"></i>
+      Play
+      /
+      <i class="fa fa-pause"></i>
+      Pause
+  </button>
+  <script>
+      var wavesurfer_cell_2_original = WaveSurfer.create({
+          container: '#cell_2_original_waveform',
+          waveColor: 'violet',
+          progressColor: 'purple',
+          splitChannels: true,
+          responsive: true,
+      });
+      wavesurfer_cell_2_original.load('static/audios/Behavior-SD_samples/2.wav');
+  </script>
+
+  <!-- Narrative -->
+  <h2 class="subtitle has-text-centered">
+    Narrative: Abbi promises Eamon not to fly because Abbi is afraid of flying.
+  </h2>
+  <!-- Behaviors -->
+  <p>Behaviors:</p>
+  <table class="table is-striped is-fullwidth">
+    <thead>
+      <tr>
+        <th>Speaker</th>
+        <th>Utterance Length</th>
+        <th>Filler Words</th>
+        <th>Backchannels</th>
+        <th>Interruptions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Abbi</td>
+        <td>1</td>
+        <td>1</td>
+        <td>2</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Eamon</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Item 4 -->
+<div class="item">
+  <!-- Waveform visualization for original speech -->
+  <div id="cell_4_original_waveform"></div>
+  <button id="cell_4_original" class="play-button-demo btn btn-primary" onclick="wavesurfer_cell_4_original.playPause()">
+      <i class="fa fa-play"></i>
+      Play
+      /
+      <i class="fa fa-pause"></i>
+      Pause
+  </button>
+  <script>
+      var wavesurfer_cell_4_original = WaveSurfer.create({
+          container: '#cell_4_original_waveform',
+          waveColor: 'violet',
+          progressColor: 'purple',
+          splitChannels: true,
+          responsive: true,
+      });
+      wavesurfer_cell_4_original.load('static/audios/Behavior-SD_samples/4.wav');
+  </script>
+
+  <!-- Narrative -->
+  <h2 class="subtitle has-text-centered">
+    Narrative: Raechel speaks to Collin's mother in order to get to know her better and to find out more about Collin. Raechel is interested in learning about what kind of person Collin comes from, and she feels that speaking with his mother will give her some insight.
+  </h2>
+  <!-- Behaviors -->
+  <p>Behaviors:</p>
+  <table class="table is-striped is-fullwidth">
+    <thead>
+      <tr>
+        <th>Speaker</th>
+        <th>Utterance Length</th>
+        <th>Filler Words</th>
+        <th>Backchannels</th>
+        <th>Interruptions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Raechel</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Collin</td>
+        <td>2</td>
+        <td>2</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Item 7 -->
+<div class="item">
+  <!-- Waveform visualization for original speech -->
+  <div id="cell_7_original_waveform"></div>
+  <button id="cell_7_original" class="play-button-demo btn btn-primary" onclick="wavesurfer_cell_7_original.playPause()">
+      <i class="fa fa-play"></i>
+      Play
+      /
+      <i class="fa fa-pause"></i>
+      Pause
+  </button>
+  <script>
+      var wavesurfer_cell_7_original = WaveSurfer.create({
+          container: '#cell_7_original_waveform',
+          waveColor: 'violet',
+          progressColor: 'purple',
+          splitChannels: true,
+          responsive: true,
+      });
+      wavesurfer_cell_7_original.load('static/audios/Behavior-SD_samples/7.wav');
+  </script>
+
+  <!-- Narrative -->
+  <h2 class="subtitle has-text-centered">
+    Narrative: Markell was kind enough to invite Moishe to stay the night, even though Moishe was a complete stranger. Markell made sure that Moishe had everything they needed and even offered to make them breakfast in the morning.
+  </h2>
+  <!-- Behaviors -->
+  <p>Behaviors:</p>
+  <table class="table is-striped is-fullwidth">
+    <thead>
+      <tr>
+        <th>Speaker</th>
+        <th>Utterance Length</th>
+        <th>Filler Words</th>
+        <th>Backchannels</th>
+        <th>Interruptions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Markell</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Moishe</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- Item 8 -->
+<div class="item">
+  <!-- Waveform visualization for original speech -->
+  <div id="cell_8_original_waveform"></div>
+  <button id="cell_8_original" class="play-button-demo btn btn-primary" onclick="wavesurfer_cell_8_original.playPause()">
+      <i class="fa fa-play"></i>
+      Play
+      /
+      <i class="fa fa-pause"></i>
+      Pause
+  </button>
+  <script>
+      var wavesurfer_cell_8_original = WaveSurfer.create({
+          container: '#cell_8_original_waveform',
+          waveColor: 'violet',
+          progressColor: 'purple',
+          splitChannels: true,
+          responsive: true,
+      });
+      wavesurfer_cell_8_original.load('static/audios/Behavior-SD_samples/8.wav');
+  </script>
+
+  <!-- Narrative -->
+  <h2 class="subtitle has-text-centered">
+    Narrative: Illiana and Jerred got into a fight because Jerred wouldn't let Illiana borrow his car. As punishment, Jerred made Illiana clean his room and do all the chores for a week.
+  </h2>
+  <!-- Behaviors -->
+  <p>Behaviors:</p>
+  <table class="table is-striped is-fullwidth">
+    <thead>
+      <tr>
+        <th>Speaker</th>
+        <th>Utterance Length</th>
+        <th>Filler Words</th>
+        <th>Backchannels</th>
+        <th>Interruptions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Illiana</td>
+        <td>2</td>
+        <td>2</td>
+        <td>1</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Jerred</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
 
 
 
@@ -258,22 +503,6 @@
 
 
 
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
@@ -306,7 +535,7 @@
 
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-    <!-- End of Statcounter Code -->
+  <!-- End of Statcounter Code -->
 
-  </body>
-  </html>
+</body>
+</html>

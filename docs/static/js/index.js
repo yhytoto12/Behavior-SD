@@ -7,10 +7,9 @@ $(document).ready(function() {
     var options = {
 			slidesToScroll: 1,
 			slidesToShow: 1,
-			loop: true,
-			infinite: true,
-			autoplay: true,
-			autoplaySpeed: 5000,
+			loop: false,
+			infinite: false,
+			autoplay: false,
     }
 
 		// Initialize all div with carousel class
