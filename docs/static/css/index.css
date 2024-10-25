@@ -139,12 +139,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.behaviors-title {
-  font-weight: bold;
-  margin-top: 1rem;
-  font-size: 1rem;  /* Adjust size as necessary */
-}
-
 .behaviors-list {
   list-style-type: disc;
   padding-left: 20px;

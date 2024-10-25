@@ -144,6 +144,23 @@ Our work opens new possibilities for developing behaviorally-aware dialogue syst
 </section>
 <!-- End paper abstract -->
 
+<!-- Behavior-SD introduction -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Behavior-SD</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="static/images/frameworks-v4-1.png" alt="Framework Visualization" />
+          <img src="static/images/statistics.png", alt="Data Visualization" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Behavior-SD introduction -->
+
 <script src="https://unpkg.com/wavesurfer.js"></script>
 <!-- Image carousel -->
 <section class="hero is-small">
@@ -151,6 +168,7 @@ Our work opens new possibilities for developing behaviorally-aware dialogue syst
     <div class="container">
       <h2 class="title is-3">Samples from Behavior-SD</h2>
       <div id="results-carousel" class="carousel results-carousel">
+
         <!-- Item 0 -->
         <div class="item">
           <!-- Waveform visualization for original speech -->
@@ -174,11 +192,15 @@ Our work opens new possibilities for developing behaviorally-aware dialogue syst
           </script>
 
           <!-- Narrative -->
-          <h2 class="subtitle has-text-centered">
-            Narrative: Harlan laughed when Sofiya said she was too dependent on her parents. "I don't need them to do everything for me," Harlan said. "I can take care of myself."
+          <h2 class="narrative" style="font-size: 1.2em; font-weight: bold;">
+            Narrative:
           </h2>
+          <p class="narrative">
+            Harlan laughed when Sofiya said she was too dependent on her parents. "I don't need them to do everything for me," Harlan said. "I can take care of myself."
+          </p>
+
           <!-- Behaviors -->
-          <p>Behaviors:</p>
+          <p style="font-size: 1.2em; font-weight: bold;">Behaviors:</p>
           <table class="table is-striped is-fullwidth">
             <thead>
               <tr>
@@ -206,300 +228,379 @@ Our work opens new possibilities for developing behaviorally-aware dialogue syst
               </tr>
             </tbody>
           </table>
+
+          <!-- Dialogue Transcript -->
+          <h2 style="font-size: 1.2em; font-weight: bold;">Dialogue Transcript:</h2>
+          <div class="dialogue">
+            <p><strong>Sofiya:</strong> You know, <span style="color:blue;">{Hmm.}</span> I sometimes think I'm too dependent on my parents for everything. <span style="color:blue;">{Yeah.}</span> [laughter] <span style="color:blue;">{Oh.}</span> It's like I can't do anything without them.</p>
+
+            <p><strong>Harlan:</strong> [laughter] Oh, Sofiya, I understand what you mean, but really, <span style="color:red;">{Right.}</span> I don't need them to do everything for me. <span style="color:red;">{Okay.}</span> I can take care of myself quite well.</p>
+
+            <p><strong>Sofiya:</strong> Really? <span style="color:blue;">{Yeah.}</span> So you mean, like, you handle all those adult responsibilities on your own <span style="color:blue;">{Uh-huh.}</span> without ever turning to them for help?</p>
+
+            <p><strong>Harlan:</strong> Yeah, exactly. <span style="color:red;">{That's great.}</span> I mean, I handle my own finances, <span style="color:red;">{Oh, really?}</span> make my own meals, and even manage to keep the apartment clean. It's all about, you know, being self-reliant.</p>
+
+            <p><strong>Sofiya:</strong> That's impressive. But don't you occasionally find yourself in situations where you just need to call them for advice or something?</p>
+
+            <p><strong>Harlan:</strong> Well, sometimes. I mean, like, sometimes when I have really tough decisions to make... [interrupted]</p>
+
+            <p><strong>Sofiya (interrupt):</strong> Decisions about your career <span style="color:blue;">{Yeah.}</span> or personal life?</p>
+
+            <p><strong>Harlan:</strong> Yeah, exactly. Especially when it comes to big decisions like that, <span style="color:red;">{I see.}</span> I might reach out just to get their perspective.</p>
+
+            <p><strong>Sofiya:</strong> That makes sense. I guess it's about finding a balance <span style="color:blue;">{Right.}</span> between independence <span style="color:blue;">{Yeah.}</span> and knowing when to seek guidance.</p>
+
+            <p><strong>Harlan:</strong> Precisely. <span style="color:red;">{Okay.}</span> It's not about relying on them for everything. <span style="color:red;">{Mhm.}</span> It's more about, you know, having that support system but still being able to function independently most of the time.</p>
+
+            <p><strong>Sofiya:</strong> I see what you mean. <span style="color:blue;">{Yeah.}</span> Maybe it's something I should strive to achieve myself.</p>
+          </div>
         </div>
 
         <!-- Item 2 -->
-<div class="item">
-  <!-- Waveform visualization for original speech -->
-  <div id="cell_2_original_waveform"></div>
-  <button id="cell_2_original" class="play-button-demo btn btn-primary" onclick="wavesurfer_cell_2_original.playPause()">
-      <i class="fa fa-play"></i>
-      Play
-      /
-      <i class="fa fa-pause"></i>
-      Pause
-  </button>
-  <script>
-      var wavesurfer_cell_2_original = WaveSurfer.create({
-          container: '#cell_2_original_waveform',
-          waveColor: 'violet',
-          progressColor: 'purple',
-          splitChannels: true,
-          responsive: true,
-      });
-      wavesurfer_cell_2_original.load('static/audios/Behavior-SD_samples/2.wav');
-  </script>
+        <div class="item">
+          <!-- Waveform visualization for original speech -->
+          <div id="cell_2_original_waveform"></div>
+          <button id="cell_2_original" class="play-button-demo btn btn-primary" onclick="wavesurfer_cell_2_original.playPause()">
+              <i class="fa fa-play"></i>
+              Play
+              /
+              <i class="fa fa-pause"></i>
+              Pause
+          </button>
+          <script>
+              var wavesurfer_cell_2_original = WaveSurfer.create({
+                  container: '#cell_2_original_waveform',
+                  waveColor: 'violet',
+                  progressColor: 'purple',
+                  splitChannels: true,
+                  responsive: true,
+              });
+              wavesurfer_cell_2_original.load('static/audios/Behavior-SD_samples/2.wav');
+          </script>
 
-  <!-- Narrative -->
-  <h2 class="subtitle has-text-centered">
-    Narrative: Abbi promises Eamon not to fly because Abbi is afraid of flying.
-  </h2>
-  <!-- Behaviors -->
-  <p>Behaviors:</p>
-  <table class="table is-striped is-fullwidth">
-    <thead>
-      <tr>
-        <th>Speaker</th>
-        <th>Utterance Length</th>
-        <th>Filler Words</th>
-        <th>Backchannels</th>
-        <th>Interruptions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Abbi</td>
-        <td>1</td>
-        <td>1</td>
-        <td>2</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td>Eamon</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>2</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+          <!-- Narrative -->
+          <h2 class="narrative" style="font-size: 1.2em; font-weight: bold;">
+            Narrative: 
+          </h2>
+          <p class="narrative">
+            Abbi promises Eamon not to fly because Abbi is afraid of flying.
+          </p>
 
-<!-- Item 4 -->
-<div class="item">
-  <!-- Waveform visualization for original speech -->
-  <div id="cell_4_original_waveform"></div>
-  <button id="cell_4_original" class="play-button-demo btn btn-primary" onclick="wavesurfer_cell_4_original.playPause()">
-      <i class="fa fa-play"></i>
-      Play
-      /
-      <i class="fa fa-pause"></i>
-      Pause
-  </button>
-  <script>
-      var wavesurfer_cell_4_original = WaveSurfer.create({
-          container: '#cell_4_original_waveform',
-          waveColor: 'violet',
-          progressColor: 'purple',
-          splitChannels: true,
-          responsive: true,
-      });
-      wavesurfer_cell_4_original.load('static/audios/Behavior-SD_samples/4.wav');
-  </script>
+          <!-- Behaviors -->
+          <p style="font-size: 1.2em; font-weight: bold;">Behaviors:</p>
+          <table class="table is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th>Speaker</th>
+                <th>Utterance Length</th>
+                <th>Filler Words</th>
+                <th>Backchannels</th>
+                <th>Interruptions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Abbi</td>
+                <td>1</td>
+                <td>1</td>
+                <td>2</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Eamon</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
 
-  <!-- Narrative -->
-  <h2 class="subtitle has-text-centered">
-    Narrative: Raechel speaks to Collin's mother in order to get to know her better and to find out more about Collin. Raechel is interested in learning about what kind of person Collin comes from, and she feels that speaking with his mother will give her some insight.
-  </h2>
-  <!-- Behaviors -->
-  <p>Behaviors:</p>
-  <table class="table is-striped is-fullwidth">
-    <thead>
-      <tr>
-        <th>Speaker</th>
-        <th>Utterance Length</th>
-        <th>Filler Words</th>
-        <th>Backchannels</th>
-        <th>Interruptions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Raechel</td>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td>Collin</td>
-        <td>2</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+          <!-- Dialogue Transcript -->
+          <h2 style="font-size: 1.2em; font-weight: bold;">Dialogue Transcript:</h2>
+          <div class="dialogue">
+            <p><strong>Abbi:</strong> You know, Eamon, this time I'm definitely not flying. I just, I can't handle [interrupted]</p>
 
-<!-- Item 7 -->
-<div class="item">
-  <!-- Waveform visualization for original speech -->
-  <div id="cell_7_original_waveform"></div>
-  <button id="cell_7_original" class="play-button-demo btn btn-primary" onclick="wavesurfer_cell_7_original.playPause()">
-      <i class="fa fa-play"></i>
-      Play
-      /
-      <i class="fa fa-pause"></i>
-      Pause
-  </button>
-  <script>
-      var wavesurfer_cell_7_original = WaveSurfer.create({
-          container: '#cell_7_original_waveform',
-          waveColor: 'violet',
-          progressColor: 'purple',
-          splitChannels: true,
-          responsive: true,
-      });
-      wavesurfer_cell_7_original.load('static/audios/Behavior-SD_samples/7.wav');
-  </script>
+            <p><strong>Eamon (interrupt):</strong> Heights?</p>
 
-  <!-- Narrative -->
-  <h2 class="subtitle has-text-centered">
-    Narrative: Markell was kind enough to invite Moishe to stay the night, even though Moishe was a complete stranger. Markell made sure that Moishe had everything they needed and even offered to make them breakfast in the morning.
-  </h2>
-  <!-- Behaviors -->
-  <p>Behaviors:</p>
-  <table class="table is-striped is-fullwidth">
-    <thead>
-      <tr>
-        <th>Speaker</th>
-        <th>Utterance Length</th>
-        <th>Filler Words</th>
-        <th>Backchannels</th>
-        <th>Interruptions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Markell</td>
-        <td>0</td>
-        <td>0</td>
-        <td>1</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>Moishe</td>
-        <td>2</td>
-        <td>2</td>
-        <td>0</td>
-        <td>0</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+            <p><strong>Abbi:</strong> Exactly! I get so anxious even thinking about it.</p>
 
+            <p><strong>Eamon:</strong> It's understandable. <span style="color:red;">{Mhm.}</span> We've talked about other ways to get there, like driving or taking a train.</p>
 
-<!-- Item 8 -->
-<div class="item">
-  <!-- Waveform visualization for original speech -->
-  <div id="cell_8_original_waveform"></div>
-  <button id="cell_8_original" class="play-button-demo btn btn-primary" onclick="wavesurfer_cell_8_original.playPause()">
-      <i class="fa fa-play"></i>
-      Play
-      /
-      <i class="fa fa-pause"></i>
-      Pause
-  </button>
-  <script>
-      var wavesurfer_cell_8_original = WaveSurfer.create({
-          container: '#cell_8_original_waveform',
-          waveColor: 'violet',
-          progressColor: 'purple',
-          splitChannels: true,
-          responsive: true,
-      });
-      wavesurfer_cell_8_original.load('static/audios/Behavior-SD_samples/8.wav');
-  </script>
+            <p><strong>Abbi:</strong> Yeah, and driving isn't bad. Actually, it's quite fun. I was planning on making a road trip out of it. Maybe stop by some places on the way, like [interrupted]</p>
 
-  <!-- Narrative -->
-  <h2 class="subtitle has-text-centered">
-    Narrative: Illiana and Jerred got into a fight because Jerred wouldn't let Illiana borrow his car. As punishment, Jerred made Illiana clean his room and do all the chores for a week.
-  </h2>
-  <!-- Behaviors -->
-  <p>Behaviors:</p>
-  <table class="table is-striped is-fullwidth">
-    <thead>
-      <tr>
-        <th>Speaker</th>
-        <th>Utterance Length</th>
-        <th>Filler Words</th>
-        <th>Backchannels</th>
-        <th>Interruptions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Illiana</td>
-        <td>2</td>
-        <td>2</td>
-        <td>1</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td>Jerred</td>
-        <td>0</td>
-        <td>1</td>
-        <td>0</td>
-        <td>2</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+            <p><strong>Eamon (interrupt):</strong> The national parks?</p>
 
-      </div>
-    </div>
-  </div>
-</section>
+            <p><strong>Abbi:</strong> Yes! That would be a perfect break from the drive. And you know what, it's way less stressful.</p>
 
+            <p><strong>Eamon:</strong> Sounds like a good plan. <span style="color:red;">{Yeah!}</span> Let's make sure to plan those stops then.</p>
 
+            <p><strong>Abbi:</strong> Definitely. And I already promised myself no flights this time, no matter what. You gotta keep me accountable, okay?</p>
 
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <p><strong>Eamon:</strong> Of course, <span style="color:red;">{Great.}</span> I've got your back.</p>
           </div>
         </div>
+
+        <!-- Item 4 -->
+        <div class="item">
+          <!-- Waveform visualization for original speech -->
+          <div id="cell_4_original_waveform"></div>
+          <button id="cell_4_original" class="play-button-demo btn btn-primary" onclick="wavesurfer_cell_4_original.playPause()">
+              <i class="fa fa-play"></i>
+              Play
+              /
+              <i class="fa fa-pause"></i>
+              Pause
+          </button>
+          <script>
+              var wavesurfer_cell_4_original = WaveSurfer.create({
+                  container: '#cell_4_original_waveform',
+                  waveColor: 'violet',
+                  progressColor: 'purple',
+                  splitChannels: true,
+                  responsive: true,
+              });
+              wavesurfer_cell_4_original.load('static/audios/Behavior-SD_samples/4.wav');
+          </script>
+
+          <!-- Narrative -->
+          <h2 class="narrative" style="font-size: 1.2em; font-weight: bold;">
+            Narrative:
+          </h2>
+          <p class="narrative">
+            Raechel speaks to Collin's mother in order to get to know her better and to find out more about Collin. Raechel is interested in learning about what kind of person Collin comes from, and she feels that speaking with his mother will give her some insight.
+          </p>
+
+          <!-- Behaviors -->
+          <p style="font-size: 1.2em; font-weight: bold;">Behaviors:</p>
+          <table class="table is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th>Speaker</th>
+                <th>Utterance Length</th>
+                <th>Filler Words</th>
+                <th>Backchannels</th>
+                <th>Interruptions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Raechel</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Collin</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Dialogue Transcript -->
+          <h2 style="font-size: 1.2em; font-weight: bold;">Dialogue Transcript:</h2>
+          <div class="dialogue">
+            <p><strong>Raechel:</strong> Hey Collin, <span style="color:blue;">{Hey!}</span> I had a lovely chat with your mom the other day. She's wonderful!</p>
+
+            <p><strong>Collin:</strong> Oh, that's great to hear! She's, um, always been such an interesting person, full of stories about her childhood and everything. Did she talk about her upbringing?</p>
+
+            <p><strong>Raechel:</strong> Yeah, she did mention growing up on the farm. I must say, it sounds quite idyllic. [laughter]</p>
+
+            <p><strong>Collin:</strong> <laughter>Yeah</laughter>, it was pretty, uh, unique. She loved it there. So, what else did you two chat about?</p>
+
+            <p><strong>Raechel:</strong> Well, I was really curious about what you were like as a kid. She had some fun stories.</p>
+
+            <p><strong>Collin:</strong> Oh boy, I bet she told you about all those, um, wild adventures I went on. I was quite a handful!</p>
+
+            <p><strong>Raechel:</strong> Actually, she did mention your curious nature. She said you were always asking questions about everything and, I guess, [interrupted]</p>
+
+            <p><strong>Collin (interrupt):</strong> Always getting into trouble for it, for sure! But, like, I think it really helped shape, you know, who I am today.</p>
+
+            <p><strong>Raechel:</strong> She also mentioned how kind you were, especially to your younger siblings. Why didn't you ever share that? [laughter]</p>
+
+            <p><strong>Collin:</strong> Well, I guess it's, um, a bit embarrassing, but yeah, I always felt like, you know, I should look out for them. It's just part of being the older brother, right?</p>
+
+            <p><strong>Raechel:</strong> Absolutely, <span style="color:blue;">{Yeah.}</span> and it's admirable. <span style="color:blue;">{Thanks.}</span> I enjoyed learning more about you through her stories. <span style="color:blue;">{Right.}</span> Your family seems amazing.</p>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="item">
+          <!-- Waveform visualization for original speech -->
+          <div id="cell_7_original_waveform"></div>
+          <button id="cell_7_original" class="play-button-demo btn btn-primary" onclick="wavesurfer_cell_7_original.playPause()">
+              <i class="fa fa-play"></i>
+              Play
+              /
+              <i class="fa fa-pause"></i>
+              Pause
+          </button>
+          <script>
+              var wavesurfer_cell_7_original = WaveSurfer.create({
+                  container: '#cell_7_original_waveform',
+                  waveColor: 'violet',
+                  progressColor: 'purple',
+                  splitChannels: true,
+                  responsive: true,
+              });
+              wavesurfer_cell_7_original.load('static/audios/Behavior-SD_samples/7.wav');
+          </script>
+
+          <!-- Narrative -->
+          <h2 class="narrative" style="font-size: 1.2em; font-weight: bold;">
+            Narrative:
+          </h2>
+          <p class="narrative">
+          Markell was kind enough to invite Moishe to stay the night, even though Moishe was a complete stranger. Markell made sure that Moishe had everything they needed and even offered to make them breakfast in the morning.
+          </p>
+          <!-- Behaviors -->
+          <p style="font-size: 1.2em; font-weight: bold;">Behaviors:</p>
+          <table class="table is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th>Speaker</th>
+                <th>Utterance Length</th>
+                <th>Filler Words</th>
+                <th>Backchannels</th>
+                <th>Interruptions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Markell</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Moishe</td>
+                <td>2</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Dialogue Transcript -->
+          <h2 style="font-size: 1.2em; font-weight: bold;">Dialogue Transcript:</h2>
+          <div class="dialogue">
+            <p><strong>Markell:</strong> So, do you need anything else to be comfortable tonight?</p>
+
+            <p><strong>Moishe:</strong> Uh, you know, I think I have everything I need. It's, um, really nice of you to, uh, offer me a place to stay. I didn’t expect, um, such hospitality from someone I just met.</p>
+
+            <p><strong>Markell:</strong> No problem. Happy to help.</p>
+
+            <p><strong>Moishe:</strong> Well, uh, in the morning, I usually like, um, a bit of breakfast to start my day. I've heard, uh, it's the most important meal, and I like to make it sort of detailed with eggs, toast, sometimes a bit of, uh [interrupted]</p>
+
+            <p><strong>Markell (interrupt):</strong> I’ll make us breakfast. Eggs sound good?</p>
+
+            <p><strong>Moishe:</strong> Yeah, that's great! Thank you. And, uh, if you don't mind me saying, your hospitality reminds me of this friend I used to have who would, uh, always welcome guests warmly, <span style="color:red;">{Oh, really?}</span> always eager to provide, sort of, a complete experience <span style="color:red;">{Hmm}</span> whether it be with food, comfort, or just, you know [interrupted]</p>
+
+            <p><strong>Markell (interrupt):</strong> Glad to hear that. Rest up.</p>
+
+            <p><strong>Moishe:</strong> Thanks again, Markell. <span style="color:red;">{You're welcome.}</span> It's, um, really appreciated. I, uh, had a long day and was just thinking of how to unwind with, uh [interrupted]</p>
+
+            <p><strong>Markell (interrupt):</strong> Coffee or tea for breakfast?</p>
+
+            <p><strong>Moishe:</strong> Oh, uh, tea would be lovely. Thanks!</p>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="item">
+          <!-- Waveform visualization for original speech -->
+          <div id="cell_8_original_waveform"></div>
+          <button id="cell_8_original" class="play-button-demo btn btn-primary" onclick="wavesurfer_cell_8_original.playPause()">
+              <i class="fa fa-play"></i>
+              Play
+              /
+              <i class="fa fa-pause"></i>
+              Pause
+          </button>
+          <script>
+              var wavesurfer_cell_8_original = WaveSurfer.create({
+                  container: '#cell_8_original_waveform',
+                  waveColor: 'violet',
+                  progressColor: 'purple',
+                  splitChannels: true,
+                  responsive: true,
+              });
+              wavesurfer_cell_8_original.load('static/audios/Behavior-SD_samples/8.wav');
+          </script>
+
+          <!-- Narrative -->
+          <h2 class="narrative" style="font-size: 1.2em; font-weight: bold;">
+            Narrative: 
+          </h2>
+          <p class="narrative">
+            Illiana and Jerred got into a fight because Jerred wouldn't let Illiana borrow his car. As punishment, Jerred made Illiana clean his room and do all the chores for a week.
+          </p>
+
+          <!-- Behaviors -->
+          <p style="font-size: 1.2em; font-weight: bold;">Behaviors:</p>
+          <table class="table is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th>Speaker</th>
+                <th>Utterance Length</th>
+                <th>Filler Words</th>
+                <th>Backchannels</th>
+                <th>Interruptions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Illiana</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Jerred</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Dialogue Transcript -->
+          <h2 style="font-size: 1.2em; font-weight: bold;">Dialogue Transcript:</h2>
+          <div class="dialogue">
+            <p><strong>Illiana:</strong> You know, Jerred, I've been thinking, like, that maybe I didn't exactly deserve the whole, um, punishment thing with your car, you know?</p>
+
+            <p><strong>Jerred:</strong> I mean, it wasn't just about borrowing the car. It's also about trust, Illiana.</p>
+
+            <p><strong>Illiana:</strong> Right, but I was super careful the last time I borrowed it, and, um, I only needed it for a really quick trip. So, it's like, not a big deal or anything, but [interrupted]</p>
+
+            <p><strong>Jerred (interrupt):</strong> You were late the last time. <span style="color:red;">{Uh-huh.}</span> That's why it felt risky.</p>
+
+            <p><strong>Illiana:</strong> I guess. But making me clean your room and do all those chores? It's, like, pretty excessive, don't you think?</p>
+
+            <p><strong>Jerred:</strong> Well, you learned your lesson, right? That was the point.</p>
+
+            <p><strong>Illiana:</strong> Yeah, I learned that doing chores isn't exactly fun. But still, I mean, maybe if we, you know, talked it through a bit more, we could figure out a better way [interrupted]</p>
+
+            <p><strong>Jerred (interrupt):</strong> Like, just asking directly next time, maybe. Communication helps.</p>
+
+            <p><strong>Illiana:</strong> For sure, I get that. So, next time, I'll just, um, run it by you beforehand, and maybe we could come to some sort of mutual agreement on the whole, you know, borrowing deal without going into punishment territory.</p>
+
+            <p><strong>Jerred:</strong> Sounds good. Let's just keep things smooth next time.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
 
 
 
