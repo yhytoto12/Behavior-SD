@@ -119,7 +119,7 @@
                       </a>
                     </span>
 
-                    
+
                     <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
@@ -911,7 +911,15 @@
                                 src="static/images/BeDLM-1.png"
                                 width="80%"
                                 alt="Behavior-conditioned Dialogue Language Model"
+                                style="margin: 16px"
                             />
+                            <div class="content has-text-justified">
+                                <p>
+                                    We introduce BeDLM, a spoken dialogue language model designed to generate simultaneous two-channel
+                                    speech conditioned on conversational behaviors and a narrative.
+                                    BeDLM is trained on Behavior-SD, a large-scale dataset containing over 100K spoken dialogues annotated with
+                                    conversational behaviors and narratives.
+                                </p>
                         </div>
                     </div>
                 </div>
@@ -1070,15 +1078,20 @@
                                         </th>
                                     </tr>
                                     <tr>
+                                        <td colspan="2" style="text-align: left;">
+                                            <strong>Narrative:</strong> Keilyn was critical of the holes he found in Danna's research. He felt that Danna had not been thorough in his work and that it reflected poorly on Keilyn.
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <td style="text-align: left;">
                                             <strong>Behaviors:</strong><br>
-                                            <span style="display: inline-block; width: 60px;">Harlan:</span> Utterance Length (2), Filler Words (2), Backchannels (2), Interruptions (1)<br>
-                                            <span style="display: inline-block; width: 60px;">Sofiya:</span> Utterance Length (2), Filler Words (0), Backchannels (2), Interruptions (0)
+                                            <span style="display: inline-block; width: 60px;">Keilyn:</span> Utterance Length (0), Filler Words (1), <strong>Backchannels (0)</strong>, Interruptions (0)<br>
+                                            <span style="display: inline-block; width: 60px;">Danna:</span> Utterance Length (1), Filler Words (0), Backchannels (0), Interruptions (1)
                                         </td>
                                         <td style="text-align: left;">
                                             <strong>Behaviors:</strong><br>
-                                            <span style="display: inline-block; width: 60px;">Harlan:</span> Utterance Length (2), Filler Words (2), Backchannels (2), Interruptions (1)<br>
-                                            <span style="display: inline-block; width: 60px;">Sofiya:</span> Utterance Length (2), Filler Words (0), Backchannels (2), Interruptions (0)
+                                            <span style="display: inline-block; width: 60px;">Keilyn:</span> Utterance Length (0), Filler Words (1), <strong>Backchannels (2)</strong>, Interruptions (0)<br>
+                                            <span style="display: inline-block; width: 60px;">Danna:</span> Utterance Length (1), Filler Words (0), Backchannels (0), Interruptions (1)
                                         </td>
                                     </tr>
                                     <tr>
@@ -1135,19 +1148,24 @@
                                 <table class="generate-results">
                                     <tr>
                                         <th colspan="2">
-                                            Sample 1
+                                            Sample 2
                                         </th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="text-align: left;">
+                                            <strong>Narrative:</strong> Jahsir admires Tyreek's ability to play the cello. Now Jahsir feels proud and happy that he can play the cello too.
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;">
                                             <strong>Behaviors:</strong><br>
-                                            <span style="display: inline-block; width: 60px;">Harlan:</span> Utterance Length (2), Filler Words (2), Backchannels (2), Interruptions (1)<br>
-                                            <span style="display: inline-block; width: 60px;">Sofiya:</span> Utterance Length (2), Filler Words (0), Backchannels (2), Interruptions (0)
+                                            <span style="display: inline-block; width: 60px;">Jahsir:</span> Utterance Length (0), Filler Words (0), Backchannels (1), Interruptions (0)<br>
+                                            <span style="display: inline-block; width: 60px;">Tyreek:</span> <strong>Utterance Length (0), Filler Words (0),</strong> Backchannels (0), Interruptions (0)
                                         </td>
                                         <td style="text-align: left;">
                                             <strong>Behaviors:</strong><br>
-                                            <span style="display: inline-block; width: 60px;">Harlan:</span> Utterance Length (2), Filler Words (2), Backchannels (2), Interruptions (1)<br>
-                                            <span style="display: inline-block; width: 60px;">Sofiya:</span> Utterance Length (2), Filler Words (0), Backchannels (2), Interruptions (0)
+                                            <span style="display: inline-block; width: 60px;">Jahsir:</span> Utterance Length (0), Filler Words (0), Backchannels (1), Interruptions (0)<br>
+                                            <span style="display: inline-block; width: 60px;">Tyreek:</span> <strong>Utterance Length (2), Filler Words (2),</strong> Backchannels (0), Interruptions (0)
                                         </td>
                                     </tr>
                                     <tr>
