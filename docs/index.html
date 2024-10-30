@@ -103,13 +103,12 @@
                             </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Vision and Learning Lab, Seoul National University<br>Under reviewed</span>
+                    <span class="author-block">Vision and Learning Lab, Seoul National University<br>Under Review</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
-                  <div class="column has-text-centered">
+                  <!-- <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
                       <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
@@ -120,7 +119,7 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
+                    
                     <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
@@ -131,7 +130,6 @@
                     </a>
                   </span>
 
-                  <!-- Github link -->
                   <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
@@ -142,8 +140,7 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
-                <!-- <span class="link-block">
+                <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -151,8 +148,8 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span> -->
-            </div>
+              </span>
+            </div> -->
         </section>
 
         <!-- Paper abstract -->
@@ -576,179 +573,6 @@
                             </div>
                         </div>
 
-                        <!-- Item 4 -->
-                        <div class="item">
-                            <div class="wave-container">
-                                <!-- Waveform visualization for original speech -->
-                                <div id="cell_4_original_waveform"></div>
-                                <button
-                                    id="cell_4_original"
-                                    class="play-button-demo btn btn-primary"
-                                    onclick="wavesurfer_cell_4_original.playPause()"
-                                >
-                                    <i class="fa fa-play"></i>
-                                    Play /
-                                    <i class="fa fa-pause"></i>
-                                    Pause
-                                </button>
-                                <script>
-                                    var wavesurfer_cell_4_original =
-                                        WaveSurfer.create({
-                                            container:
-                                                "#cell_4_original_waveform",
-                                            waveColor: "violet",
-                                            progressColor: "purple",
-                                            splitChannels: true,
-                                            responsive: true,
-                                        });
-                                    wavesurfer_cell_4_original.load(
-                                        "static/audios/Behavior-SD_samples/4.wav"
-                                    );
-                                </script>
-
-                                <!-- Narrative -->
-                                <h2
-                                    class="narrative"
-                                    style="font-size: 1.2em; font-weight: bold"
-                                >
-                                    Narrative:
-                                </h2>
-                                <p class="narrative">
-                                    Raechel speaks to Collin's mother in order
-                                    to get to know her better and to find out
-                                    more about Collin. Raechel is interested in
-                                    learning about what kind of person Collin
-                                    comes from, and she feels that speaking with
-                                    his mother will give her some insight.
-                                </p>
-
-                                <!-- Behaviors -->
-                                <p style="font-size: 1.2em; font-weight: bold">
-                                    Behaviors:
-                                </p>
-                                <table class="table is-striped is-fullwidth">
-                                    <thead>
-                                        <tr>
-                                            <th>Speaker</th>
-                                            <th>Utterance Length</th>
-                                            <th>Filler Words</th>
-                                            <th>Backchannels</th>
-                                            <th>Interruptions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Raechel</td>
-                                            <td>1</td>
-                                            <td>0</td>
-                                            <td>0</td>
-                                            <td>0</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Collin</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                <!-- Dialogue Transcript -->
-                                <h2 style="font-size: 1.2em; font-weight: bold">
-                                    Dialogue Transcript:
-                                </h2>
-                                <div class="dialogue">
-                                    <p>
-                                        <strong>Raechel:</strong> Hey Collin,
-                                        <span style="color: blue">{Hey!}</span>
-                                        I had a lovely chat with your mom the
-                                        other day. She's wonderful!
-                                    </p>
-
-                                    <p>
-                                        <strong>Collin:</strong> Oh, that's
-                                        great to hear! She's, um, always been
-                                        such an interesting person, full of
-                                        stories about her childhood and
-                                        everything. Did she talk about her
-                                        upbringing?
-                                    </p>
-
-                                    <p>
-                                        <strong>Raechel:</strong> Yeah, she did
-                                        mention growing up on the farm. I must
-                                        say, it sounds quite idyllic. [laughter]
-                                    </p>
-
-                                    <p>
-                                        <strong>Collin:</strong>
-                                        <laughter>Yeah</laughter>, it was
-                                        pretty, uh, unique. She loved it there.
-                                        So, what else did you two chat about?
-                                    </p>
-
-                                    <p>
-                                        <strong>Raechel:</strong> Well, I was
-                                        really curious about what you were like
-                                        as a kid. She had some fun stories.
-                                    </p>
-
-                                    <p>
-                                        <strong>Collin:</strong> Oh boy, I bet
-                                        she told you about all those, um, wild
-                                        adventures I went on. I was quite a
-                                        handful!
-                                    </p>
-
-                                    <p>
-                                        <strong>Raechel:</strong> Actually, she
-                                        did mention your curious nature. She
-                                        said you were always asking questions
-                                        about everything and, I guess,
-                                        [interrupted]
-                                    </p>
-
-                                    <p>
-                                        <strong>Collin (interrupt):</strong>
-                                        Always getting into trouble for it, for
-                                        sure! But, like, I think it really
-                                        helped shape, you know, who I am today.
-                                    </p>
-
-                                    <p>
-                                        <strong>Raechel:</strong> She also
-                                        mentioned how kind you were, especially
-                                        to your younger siblings. Why didn't you
-                                        ever share that? [laughter]
-                                    </p>
-
-                                    <p>
-                                        <strong>Collin:</strong> Well, I guess
-                                        it's, um, a bit embarrassing, but yeah,
-                                        I always felt like, you know, I should
-                                        look out for them. It's just part of
-                                        being the older brother, right?
-                                    </p>
-
-                                    <p>
-                                        <strong>Raechel:</strong> Absolutely,
-                                        <span style="color: blue">{Yeah.}</span>
-                                        and it's admirable.
-                                        <span style="color: blue"
-                                            >{Thanks.}</span
-                                        >
-                                        I enjoyed learning more about you
-                                        through her stories.
-                                        <span style="color: blue"
-                                            >{Right.}</span
-                                        >
-                                        Your family seems amazing.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
                         <!-- Item 7 -->
                         <div class="item">
                             <div class="wave-container">
@@ -1104,7 +928,7 @@
                     </div>
                     <div class="carousel results-carousel">
                         <div class="item">
-                            <!-- 3x2 wave container -->
+                            <!-- 4x2 wave container -->
                             <table class="generate-results">
                                 <tr>
                                     <th colspan="4">
@@ -1113,10 +937,10 @@
                                 </tr>
                                 <tr>
                                     <td colspan="4" style="text-align: left;">
-                                        <strong>Narrative:</strong> Harlan laughed when Sofiya said she was too dependent on her parents. "I don't need them to do everything for me," Harlan said. "I can take care of myself."<br>
+                                        <strong>Narrative:</strong> Chastity is happy because he gets to go out with Tafari again. He really likes her and enjoys spending time with her. They always have a lot of fun together.<br>
                                         <strong>Behaviors:</strong> <br>
-                                        <span style="display: inline-block; width: 60px;">Harlan:</span> Utterance Length (2), Filler Words (2), Backchannels (2), Interruptions (1)<br>
-                                        <span style="display: inline-block; width: 60px;">Sofiya:</span> Utterance Length (2), Filler Words (0), Backchannels (2), Interruptions (0)
+                                        <span style="display: inline-block; width: 60px;">Chastity:</span> Utterance Length (2), Filler Words (0), Backchannels (1), Interruptions (2)<br>
+                                        <span style="display: inline-block; width: 60px;">Tafari:</span> Utterance Length (2), Filler Words (0), Backchannels (1), Interruptions (1)
                                     </td>
                                 </tr>
                                 <tr>
@@ -1147,7 +971,7 @@
                                                 splitChannels: true,
                                                 responsive: true,
                                             });
-                                            wavesurfer_cell_0_gt.load("static/audios/Behavior-SD_samples/0.wav");
+                                            wavesurfer_cell_0_gt.load("static/audios/BeDLM_samples/gt.wav");
                                         </script>
                                     </td>
                                     <td class="inner">
@@ -1171,7 +995,7 @@
                                                 splitChannels: true,
                                                 responsive: true,
                                             });
-                                            wavesurfer_cell_1_gt.load("static/audios/Behavior-SD_samples/1.wav");
+                                            wavesurfer_cell_1_gt.load("static/audios/BeDLM_samples/bedlm.wav");
                                         </script>
                                     </td>
                                     <td class="inner">
@@ -1195,8 +1019,32 @@
                                                 splitChannels: true,
                                                 responsive: true,
                                             });
-                                            wavesurfer_cell_2_gt.load("static/audios/Behavior-SD_samples/2.wav");
+                                            wavesurfer_cell_2_gt.load("static/audios/BeDLM_samples/dgslm.wav");
                                         </script>
+                                    </td>
+                                    <td class="inner">
+                                      <!-- Waveform visualization for original speech -->
+                                      <div id="cell_3_gt_waveform"></div>
+                                      <button
+                                          id="cell_3_gt"
+                                          class="play-button-demo btn btn-primary"
+                                          onclick="wavesurfer_cell_3_gt.playPause()"
+                                      >
+                                          <i class="fa fa-play"></i>
+                                          Play /
+                                          <i class="fa fa-pause"></i>
+                                          Pause
+                                      </button>
+                                      <script>
+                                          var wavesurfer_cell_3_gt = WaveSurfer.create({
+                                              container: "#cell_3_gt_waveform",
+                                              waveColor: "violet",
+                                              progressColor: "purple",
+                                              splitChannels: true,
+                                              responsive: true,
+                                          });
+                                          wavesurfer_cell_3_gt.load("static/audios/BeDLM_samples/cascaded.wav");
+                                      </script>
                                     </td>
                                 </tr>
                             </table>
@@ -1207,7 +1055,7 @@
         </section>
 
         <!-- TODO Add real data -->
-        <section class="hero">
+        <!-- <section class="hero">
             <div class="hero-body is-max-desktop carousel-container">
                 <div class="container">
                     <div class="corlumn is-centered has-text-centered">
@@ -1234,9 +1082,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <!-- wave container -->
                                         <td>
-                                            <!-- Waveform visualization for original speech -->
                                             <div id="cell_0_left_container"></div>
                                             <button
                                                 id="cell_0_left"
@@ -1260,7 +1106,6 @@
                                             </script>
                                         </td>
                                         <td>
-                                            <!-- Waveform visualization for original speech -->
                                             <div id="cell_0_right_container"></div>
                                             <button
                                                 id="cell_0_right"
@@ -1306,9 +1151,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <!-- wave container -->
                                         <td>
-                                            <!-- Waveform visualization for original speech -->
                                             <div id="cell_1_left_container"></div>
                                             <button
                                                 id="cell_1_left"
@@ -1332,7 +1175,6 @@
                                             </script>
                                         </td>
                                         <td>
-                                            <!-- Waveform visualization for original speech -->
                                             <div id="cell_1_right_container"></div>
                                             <button
                                                 id="cell_1_right"
@@ -1362,7 +1204,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
         <!--BibTex citation -->
