@@ -789,7 +789,7 @@
             <table class="generate-results">
               <tr>
                 <th colspan="5">
-                  Sample 2
+                  Sample 3
                 </th>
               </tr>
               <tr>
@@ -881,7 +881,7 @@
 
     var behaviorSDIds = [9, 2, 7, 8];
     behaviorSDIds.forEach((id, idx) => {
-      wavesurfersForBehaviorSD.push(createWaveSurfer(`#cell_${idx}_original_waveform`, `static/audios/Behavior-SD_samples/${id}.wav`));
+      wavesurfersForBehaviorSD.push(createWaveSurfer(`#cell_${idx}_original_waveform`, `static/audios/Behavior-SD_samples/${id}.mp3`));
     });
 
     var names = ["GT", "Resynthesized", "BeDLM", "dGSLM", "Cascaded"];
@@ -890,7 +890,7 @@
       wavesurfersForBeDLM.push([]);
       names.forEach((name) => {
         wavesurfersForBeDLM[i].push(
-          createWaveSurfer(`#cell_${i}_${name}_waveform`, `static/audios/BeDLM_samples/${id}/${name}.wav`)
+          createWaveSurfer(`#cell_${i}_${name}_waveform`, `static/audios/BeDLM_samples/${id}/${name}.mp3`)
         );
       });
     });
