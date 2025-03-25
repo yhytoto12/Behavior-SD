@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description"
+    content="Spoken dialogue systems and behaviorally-aware generation using large language models." />
+  <meta property="og:title" content="Behaviorally Aware Spoken Dialogue Generation" />
+  <meta property="og:description"
+    content="Introducing Behavior-SD and BeDLM to enhance natural conversational behaviors." />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta property="twitter:title" content="Behaviorally Aware Dialogue Systems" />
+  <meta name="twitter:description" content="Advancing spoken dialogue systems by modeling conversational behaviors." />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Spoken Dialogue Systems, Behavior-SD, BeDLM, LLMs, TTS, Conversational Models" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Behavior-SD</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" /> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+
+  <link rel="stylesheet" href="static/css/bulma.min.css" />
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  <link rel="stylesheet" href="static/css/index.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="static/js/wavesurfer.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              Behaviorally Aware <br />
+              Spoken Dialogue Generation
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://yhytoto12.github.io/" target="_blank">Sehun Lee</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://kwkim.me/" target="_blank">Kang-wook Kim</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://vision.snu.ac.kr/gunhee/" target="_blank">Gunhee Kim</a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Vision and Learning Lab, Seoul National University<br>NAACL 2025<br>Oral
+                Presentation</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Dataset (comming soon)</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (coming soon)</span>
+                  </a>
+                </span>
+              </div>
+  </section>
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Spoken dialogue involves behaviors like turn-taking, interruptions, filler words, and
+              backchannels, which make interactions more natural and engaging but are often overlooked in
+              language models.
+              These models struggle to explicitly model these behavioral traits, resulting in a less
+              natural and personalized communication style that aligns with user needs.
+              To address this challenge, we make two key contributions.
+              First, we introduce <strong>Behavior-SD</strong>, a large-scale dataset containing over 100K
+              spoken dialogues (2,164 hours) annotated with various conversational behaviors, synthesized
+              via LLMs to model diverse full-duplex interactions.
+              Second, we propose <strong>BeDLM</strong>, the first dialogue model capable of generating
+              natural conversations conditioned on specific behavioral and narrative contexts, supporting
+              simultaneous contributions from both speakers.
+              Through human evaluations and behavior-adherence metrics, we demonstrate that BeDLM
+              outperforms baseline models in generating natural, coherent, and behaviorally rich
+              dialogues.
+              Our work opens new possibilities for developing behaviorally-aware dialogue systems that
+              more closely mimic human conversational dynamics, enhancing user engagement and
+              communication effectiveness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Behavior-SD introduction -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-five-fifths">
+            <h2 class="title is-3">Behavior-SD</h2>
+            <img src="static/images/Behavior-SD.png" alt="Framework Visualization" />
+            <img src="static/images/Stats.png" , alt="Data Visualization" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Behavior-SD introduction -->
+
+  <!-- Image carousel -->
+  <section class="hero is-small is-light">
+    <div class="hero-body is-max-desktop carousel-container">
+      <div class="container">
+        <div class="column is-centered has-text-centered">
+          <h2 class="title is-3">Samples from Behavior-SD</h2>
+        </div>
+        <div id="results-carousel" class="carousel results-carousel">
+          <!-- item 0 -->
+          <div class="item">
+            <div class="wave-container">
+              <!-- Waveform visualization for original speech -->
+              <table class="generate-results">
+                <tr>
+                  <th>
+                    Sample 1
+                  </th>
+                </tr>
+                <tr>
+                  <td style="text-align: left;">
+                    <p style="font-weight: bold; text-decoration: underline;">Narrative:</p>
+                    <p>Derik wanted to pay Codi back for always being there for her, so she decided to take her out for
+                      dinner. Derik made reservations at Codi's favorite restaurant and even ordered her favorite dish.
+                      Codi was really touched by the gesture and appreciated it very much.<br></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align: left;">
+                    <p style="font-weight: bold; text-decoration: underline;">Behaviors:</p>
+                    <span style="display: inline-block; width: 70px; color: #D32F2F">Derik:</span> Verbosity
+                    (1), Filler Words (2), Backchannels (1), Interruptions (2)<br>
+                    <span style="display: inline-block; width: 70px; color: #1976D2">Codi:</span> Verbosity
+                    (1), Filler Words (0), Backchannels (1), Interruptions (1)
+                  </td>
+                </tr>
+                <tr>
+                  <td class="inner">
+                    <!-- Waveform visualization for original speech -->
+                    <div>
+                      <p style="text-align: left; font-weight: bold; text-decoration: underline;">Spoken Dialogue:</p>
+                    </div>
+                    <div id="cell_0_original_waveform"></div>
+                    <button id="cell_0_original" class="play-button-demo btn btn-primary"
+                      onclick="wavesurfersForBehaviorSD[0].playPause()">
+                      <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align: left;">
+                    <p style="font-weight: bold; text-decoration: underline;">Text Dialogue:</p>
+                    <p><strong>Derik:</strong> Hey Codi, you know, <span style="color : #1976D2">{Yeah?}</span> I was
+                      thinking I really wanted to, um, thank you for always being there for me. So, I've, uh, planned a
+                      little surprise for you.</p>
+                    <p><strong>Codi:</strong> Oh really? What’s the surprise? <span style="color :
+                        #D32F2F">{[laughter]}</span></p>
+                    <p><strong>Derik:</strong> Well, I made reservations at your favorite restaurant, <span
+                        style="color : #1976D2">{Oh, really?}</span> and I even ordered your favorite dish.</p>
+                    <p><strong>Codi:</strong> Wow, Derik, that’s so thoughtful! <span style="color :
+                        #D32F2F">{Thanks!}</span> I’m really touched. I can't believe you remembered.</p>
+                    <p><strong>Derik:</strong> Of course, I did! [laughter] You've done so much for me, it was the least
+                      I could [interrupted]</p>
+                    <p><strong>Codi (interrupt):</strong> Which restaurant did you pick? Just curious.</p>
+                    <p><strong>Derik:</strong> Oh, it's that Italian place you love, <span style="color :
+                        #1976D2">{Mhm.}</span> Da Vinci's. <span style="color : #1976D2">{Nice.}</span> You know, with
+                      the amazing pasta.</p>
+                    <p><strong>Codi:</strong> That's perfect! I love their lasagna. <span style="color :
+                        #D32F2F">{Great!}</span> But hey, speaking of dining out, <span style="color :
+                        #D32F2F">{Yeah?}</span> have you heard about that new vegan place downtown? [interrupted]</p>
+                    <p><strong>Derik (interrupt):</strong> Oh, um, yeah, actually, I have! <span style="color :
+                        #1976D2">{Oh, really?}</span> But, like, I'm really excited about tonight. I just, um, hope you
+                      enjoy it.</p>
+                    <p><strong>Codi:</strong> I'm sure I will, Derik. Thank you so much for doing this. It means a lot
+                      to me.</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <!-- item 0 -->
+          <div class="item">
+            <div class="wave-container">
+              <!-- Waveform visualization for original speech -->
+              <table class="generate-results">
+                <tr>
+                  <th>
+                    Sample 2
+                  </th>
+                </tr>
+                <tr>
+                  <td style="text-align: left;">
+                    <p style="font-weight: bold; text-decoration: underline;">Narrative:</p>
+                    <p>Abbi promises Eamon not to fly because Abbi
+                      is afraid of flying.<br></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align: left;">
+                    <p style="font-weight: bold; text-decoration: underline;">Behaviors:</p>
+                    <span style="display: inline-block; width: 70px; color: #D32F2F">Abbi:</span> Verbosity
+                    (1), Filler Words (1), Backchannels (2), Interruptions (0)<br>
+                    <span style="display: inline-block; width: 70px; color: #1976D2">Eamon:</span> Verbosity
+                    (0), Filler Words (0), Backchannels (0), Interruptions (2)
+                  </td>
+                </tr>
+                <tr>
+                  <td class="inner">
+                    <!-- Waveform visualization for original speech -->
+                    <div>
+                      <p style="text-align: left; font-weight: bold; text-decoration: underline;">Spoken Dialogue:</p>
+                    </div>
+                    <div id="cell_1_original_waveform"></div>
+                    <button id="cell_1_original" class="play-button-demo btn btn-primary"
+                      onclick="wavesurfersForBehaviorSD[1].playPause()">
+                      <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align: left;">
+                    <p style="font-weight: bold; text-decoration: underline;">Text Dialogue:</p>
+                    <p>
+                      <strong>Abbi:</strong> You know, Eamon,
+                      this time I'm definitely not flying. I
+                      just, I can't handle [interrupted]
+                    </p>
+
+                    <p>
+                      <strong>Eamon (interrupt):</strong>
+                      Heights?
+                    </p>
+
+                    <p>
+                      <strong>Abbi:</strong> Exactly! I get so
+                      anxious even thinking about it.
+                    </p>
+
+                    <p>
+                      <strong>Eamon:</strong> It's
+                      understandable.
+                      <span style="color: #D32F2F">{Mhm.}</span>
+                      We've talked about other ways to get
+                      there, like driving or taking a train.
+                    </p>
+
+                    <p>
+                      <strong>Abbi:</strong> Yeah, and driving
+                      isn't bad. Actually, it's quite fun. I
+                      was planning on making a road trip out
+                      of it. Maybe stop by some places on the
+                      way, like [interrupted]
+                    </p>
+
+                    <p>
+                      <strong>Eamon (interrupt):</strong> The
+                      national parks?
+                    </p>
+
+                    <p>
+                      <strong>Abbi:</strong> Yes! That would
+                      be a perfect break from the drive. And
+                      you know what, it's way less stressful.
+                    </p>
+
+                    <p>
+                      <strong>Eamon:</strong> Sounds like a
+                      good plan.
+                      <span style="color: #D32F2F">{Yeah!}</span>
+                      Let's make sure to plan those stops
+                      then.
+                    </p>
+
+                    <p>
+                      <strong>Abbi:</strong> Definitely. And I
+                      already promised myself no flights this
+                      time, no matter what. You gotta keep me
+                      accountable, okay?
+                    </p>
+
+                    <p>
+                      <strong>Eamon:</strong> Of course,
+                      <span style="color: #D32F2F">{Great.}</span>
+                      I've got your back.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <!-- item 1 -->
+          <div class="item">
+            <div class="wave-container">
+              <!-- Waveform visualization for original speech -->
+              <table class="generate-results">
+                <tr>
+                  <th>
+                    Sample 3
+                  </th>
+                </tr>
+                <tr>
+                  <td style="text-align: left;">
+                    <p style="font-weight: bold; text-decoration: underline;">Narrative:</p>
+                    <p>Markell was kind enough to invite Moishe to
+                      stay the night, even though Moishe was a
+                      complete stranger. Markell made sure that
+                      Moishe had everything they needed and even
+                      offered to make them breakfast in the
+                      morning.<br></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align: left;">
+                    <p style="font-weight: bold; text-decoration: underline;">Behaviors:</p>
+                    <span style="display: inline-block; width: 70px; color: #D32F2F">Markell:</span> Verbosity
+                    (0), Filler Words (0), Backchannels (1), Interruptions (2)<br>
+                    <span style="display: inline-block; width: 70px; color: #1976D2">Moishe:</span> Verbosity
+                    (2), Filler Words (2), Backchannels (0), Interruptions (0)
+                  </td>
+                </tr>
+                <tr>
+                  <td class="inner">
+                    <!-- Waveform visualization for original speech -->
+                    <div>
+                      <p style="text-align: left; font-weight: bold; text-decoration: underline;">Spoken Dialogue:</p>
+                    </div>
+                    <div id="cell_2_original_waveform"></div>
+                    <button id="cell_2_original" class="play-button-demo btn btn-primary"
+                      onclick="wavesurfersForBehaviorSD[2].playPause()">
+                      <i class="fa fa-play
+                      "></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align: left;">
+                    <p style="font-weight: bold; text-decoration: underline;">Text Dialogue:</p>
+                    <p>
+                      <strong>Markell:</strong> So, do you
+                      need anything else to be comfortable
+                      tonight?
+                    </p>
+
+                    <p>
+                      <strong>Moishe:</strong> Uh, you know, I
+                      think I have everything I need. It's,
+                      um, really nice of you to, uh, offer me
+                      a place to stay. I didn’t expect, um,
+                      such hospitality from someone I just
+                      met.
+                    </p>
+
+                    <p>
+                      <strong>Markell:</strong> No problem.
+                      Happy to help.
+                    </p>
+
+                    <p>
+                      <strong>Moishe:</strong> Well, uh, in
+                      the morning, I usually like, um, a bit
+                      of breakfast to start my day. I've
+                      heard, uh, it's the most important meal,
+                      and I like to make it sort of detailed
+                      with eggs, toast, sometimes a bit of, uh
+                      [interrupted]
+                    </p>
+
+                    <p>
+                      <strong>Markell (interrupt):</strong>
+                      I’ll make us breakfast. Eggs sound good?
+                    </p>
+
+                    <p>
+                      <strong>Moishe:</strong> Yeah, that's
+                      great! Thank you. And, uh, if you don't
+                      mind me saying, your hospitality reminds
+                      me of this friend I used to have who
+                      would, uh, always welcome guests warmly,
+                      <span style="color: #D32F2F">{Oh, really?}</span>
+                      always eager to provide, sort of, a
+                      complete experience
+                      <span style="color: #D32F2F">{Hmm}</span>
+                      whether it be with food, comfort, or
+                      just, you know [interrupted]
+                    </p>
+
+                    <p>
+                      <strong>Markell (interrupt):</strong>
+                      Glad to hear that. Rest up.
+                    </p>
+
+                    <p>
+                      <strong>Moishe:</strong> Thanks again,
+                      Markell.
+                      <span style="color: #D32F2F">{You're welcome.}</span>
+                      It's, um, really appreciated. I, uh, had
+                      a long day and was just thinking of how
+                      to unwind with, uh [interrupted]
+                    </p>
+
+                    <p>
+                      <strong>Markell (interrupt):</strong>
+                      Coffee or tea for breakfast?
+                    </p>
+
+                    <p>
+                      <strong>Moishe:</strong> Oh, uh, tea
+                      would be lovely. Thanks!
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <!-- item 3 -->
+          <div class="item">
+            <div class="wave-container">
+              <!-- Waveform visualization for original speech -->
+              <table class="generate-results">
+                <tr>
+                  <th>
+                    Sample 4
+                  </th>
+                </tr>
+                <tr>
+                  <td style="text-align: left;">
+                    <p style="font-weight: bold; text-decoration: underline;">Narrative:</p>
+                    <p>Illiana and Jerred got into a fight because Jerred wouldn't let Illiana borrow his car. As
+                      punishment, Jerred made Illiana clean hisroom and do all the chores for a week.<br></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align: left;">
+                    <p style="font-weight: bold; text-decoration: underline;">Behaviors:</p>
+                    <span style="display: inline-block; width: 70px; color: #D32F2F">Illiana:</span> Verbosity
+                    (2), Filler Words (2), Backchannels (1), Interruptions (0)<br>
+                    <span style="display: inline-block; width: 70px; color: #1976D2">Jerred:</span> Verbosity
+                    (0), Filler Words (1), Backchannels (0), Interruptions (2)
+                  </td>
+                </tr>
+                <tr>
+                  <td class="inner">
+                    <!-- Waveform visualization for original speech -->
+                    <div>
+                      <p style="text-align: left; font-weight: bold; text-decoration: underline;">Spoken Dialogue:</p>
+                    </div>
+                    <div id="cell_3_original_waveform"></div>
+                    <button id="cell_3_original" class="play-button-demo btn btn-primary"
+                      onclick="wavesurfersForBehaviorSD[3].playPause()">
+                      <i class="fa fa-play
+                      "></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align: left;">
+                    <p style="font-weight: bold; text-decoration: underline;">Text Dialogue:</p>
+                    <p>
+                      <strong>Illiana:</strong> You know,
+                      Jerred, I've been thinking, like, that
+                      maybe I didn't exactly deserve the
+                      whole, um, punishment thing with your
+                      car, you know?
+                    </p>
+
+                    <p>
+                      <strong>Jerred:</strong> I mean, it
+                      wasn't just about borrowing the car.
+                      It's also about trust, Illiana.
+                    </p>
+
+                    <p>
+                      <strong>Illiana:</strong> Right, but I
+                      was super careful the last time I
+                      borrowed it, and, um, I only needed it
+                      for a really quick trip. So, it's like,
+                      not a big deal or anything, but
+                      [interrupted]
+                    </p>
+
+                    <p>
+                      <strong>Jerred (interrupt):</strong> You
+                      were late the last time.
+                      <span style="color: #D32F2F">{Uh-huh.}</span>
+                      That's why it felt risky.
+                    </p>
+
+                    <p>
+                      <strong>Illiana:</strong> I guess. But
+                      making me clean your room and do all
+                      those chores? It's, like, pretty
+                      excessive, don't you think?
+                    </p>
+
+                    <p>
+                      <strong>Jerred:</strong> Well, you
+                      learned your lesson, right? That was the
+                      point.
+                    </p>
+
+                    <p>
+                      <strong>Illiana:</strong> Yeah, I
+                      learned that doing chores isn't exactly
+                      fun. But still, I mean, maybe if we, you
+                      know, talked it through a bit more, we
+                      could figure out a better way
+                      [interrupted]
+                    </p>
+
+                    <p>
+                      <strong>Jerred (interrupt):</strong>
+                      Like, just asking directly next time,
+                      maybe. Communication helps.
+                    </p>
+
+                    <p>
+                      <strong>Illiana:</strong> For sure, I
+                      get that. So, next time, I'll just, um,
+                      run it by you beforehand, and maybe we
+                      could come to some sort of mutual
+                      agreement on the whole, you know,
+                      borrowing deal without going into
+                      punishment territory.
+                    </p>
+
+                    <p>
+                      <strong>Jerred:</strong> Sounds good.
+                      Let's just keep things smooth next time.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TODO Add description -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-five-fifths">
+            <h2 class="title is-3">BeDLM</h2>
+            <!-- <h2 class="title is-3"></h2> -->
+            <h3 class="subtitle is-5">(Behavior-conditioned Dialogue Language Model)</h3>
+            <img src="static/images/BeDLM.png" width="100%" alt="Behavior-conditioned Dialogue Language Model"
+              style="margin: 16px" />
+            <div class="content has-text-justified">
+              <p>
+                We introduce BeDLM, a spoken dialogue language model designed to generate simultaneous
+                two-channel
+                speech conditioned on conversational behaviors and a narrative.
+                BeDLM is trained on Behavior-SD, a large-scale dataset containing over 100K spoken
+                dialogues annotated with
+                conversational behaviors and narratives.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="hero is-small">
+    <div class="hero-body is-max-desktop carousel-container">
+      <div class="container">
+        <div class="column is-centered has-text-centered">
+          <h3 class="title is-4">Comparison of generated dialogues from BeDLM and baselines</h3>
+        </div>
+        <div class="carousel results-carousel">
+          <!-- item 0 -->
+          <div class="item">
+            <!-- 4x2 wave container -->
+            <table class="generate-results">
+              <tr>
+                <th colspan="5">
+                  Sample 1
+                </th>
+              </tr>
+              <tr>
+                <td colspan="5" style="text-align: left;">
+                  <p style="font-weight: bold; text-decoration: underline;">Narrative:</p>
+                  Kierston watched Zayna's antics. He was amused by the way Zayna was trying
+                  to make the other kids laugh.<br>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="5" style="text-align: left;">
+                  <p style="font-weight: bold; text-decoration: underline;">Behaviors:</p>
+                  <span style="display: inline-block; width: 70px; color: #D32F2F">Kierston:</span> Verbosity
+                  (2), Filler Words (0), Backchannels (0), Interruptions (2)<br>
+                  <span style="display: inline-block; width: 70px; color: #1976D2">Zayna:</span> Verbosity
+                  (1), Filler Words (2), Backchannels (1), Interruptions (0)
+                </td>
+              </tr>
+              <tr>
+                <th>Ground Truth</th>
+                <th>Resynthesized</th>
+                <th>BeDLM (ours)</th>
+                <th>dGSLM</th>
+                <th>Cascaded</th>
+              </tr>
+              <tr>
+                <td class="inner">
+                  <!-- Waveform visualization for original speech -->
+                  <div id="cell_0_GT_waveform"></div>
+                  <button id="cell_0_GT" class="play-button-demo btn btn-primary"
+                    onclick="wavesurfersForBeDLM[0][0].playPause()">
+                    <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                  </button>
+                </td>
+                <td class="inner">
+                  <!-- Waveform visualization for original speech -->
+                  <div id="cell_0_Resynthesized_waveform"></div>
+                  <button id="cell_0_Resynthesized" class="play-button-demo btn btn-primary"
+                    onclick="wavesurfersForBeDLM[0][1].playPause()">
+                    <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                  </button>
+                </td>
+                <td class="inner">
+                  <!-- Waveform visualization for original speech -->
+                  <div id="cell_0_BeDLM_waveform"></div>
+                  <button id="cell_0_BeDLM" class="play-button-demo btn btn-primary"
+                    onclick="wavesurfersForBeDLM[0][2].playPause()">
+                    <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                  </button>
+                </td>
+                <td class="inner">
+                  <!-- Waveform visualization for original speech -->
+                  <div id="cell_0_dGSLM_waveform"></div>
+                  <button id="cell_0_dGSLM" class="play-button-demo btn btn-primary"
+                    onclick="wavesurfersForBeDLM[0][3].playPause()">
+                    <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                  </button>
+                </td>
+                <td class="inner">
+                  <!-- Waveform visualization for original speech -->
+                  <div id="cell_0_Cascaded_waveform"></div>
+                  <button id="cell_0_Cascaded" class="play-button-demo btn btn-primary"
+                    onclick="wavesurfersForBeDLM[0][4].playPause()">
+                    <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- item 1 -->
+          <div class="item">
+            <!-- 4x2 wave container -->
+            <table class="generate-results">
+              <tr>
+                <th colspan="5">
+                  Sample 2
+                </th>
+              </tr>
+              <tr>
+                <td colspan="5" style="text-align: left;">
+                  <p style="font-weight: bold; text-decoration: underline;">Narrative:</p>
+                  Jayon was impressed by Raylyn's writing. Raylyn's use of detail and her
+                  ability to describe her experiences in a way that was both relatable and engaging made Jayon want to
+                  improve her own writing. She began to pay more attention to the details in her own life and to how she
+                  could better communicate her experiences to others.<br>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="5" style="text-align: left;">
+                  <p style="font-weight: bold; text-decoration: underline;">Behaviors:</p>
+                  <span style="display: inline-block; width: 70px; color: #D32F2F">Jayon:</span> Verbosity
+                  (1), Filler Words (0), Backchannels (2), Interruptions (1)<br>
+                  <span style="display: inline-block; width: 70px; color: #1976D2">Raylyn:</span> Verbosity
+                  (2), Filler Words (2), Backchannels (0), Interruptions (2)
+                </td>
+              </tr>
+              <tr>
+                <th>Ground Truth</th>
+                <th>Resynthesized</th>
+                <th>BeDLM (ours)</th>
+                <th>dGSLM</th>
+                <th>Cascaded</th>
+              </tr>
+              <tr>
+                <td class="inner">
+                  <!-- Waveform visualization for original speech -->
+                  <div id="cell_1_GT_waveform"></div>
+                  <button id="cell_1_GT" class="play-button-demo btn btn-primary"
+                    onclick="wavesurfersForBeDLM[2][0].playPause()">
+                    <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                  </button>
+                </td>
+                <td class="inner">
+                  <!-- Waveform visualization for original speech -->
+                  <div id="cell_1_Resynthesized_waveform"></div>
+                  <button id="cell_1_Resynthesized" class="play-button-demo btn btn-primary"
+                    onclick="wavesurfersForBeDLM[2][1].playPause()">
+                    <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                  </button>
+                </td>
+                <td class="inner">
+                  <!-- Waveform visualization for original speech -->
+                  <div id="cell_1_BeDLM_waveform"></div>
+                  <button id="cell_1_BeDLM" class="play-button-demo btn btn-primary"
+                    onclick="wavesurfersForBeDLM[2][2].playPause()">
+                    <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                  </button>
+                </td>
+                <td class="inner">
+                  <!-- Waveform visualization for original speech -->
+                  <div id="cell_1_dGSLM_waveform"></div>
+                  <button id="cell_1_dGSLM" class="play-button-demo btn btn-primary"
+                    onclick="wavesurfersForBeDLM[2][3].playPause()">
+                    <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                  </button>
+                </td>
+                <td class="inner">
+                  <!-- Waveform visualization for original speech -->
+                  <div id="cell_1_Cascaded_waveform"></div>
+                  <button id="cell_1_Cascaded" class="play-button-demo btn btn-primary"
+                    onclick="wavesurfersForBeDLM[2][4].playPause()">
+                    <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- item 1 -->
+          <div class="item">
+            <!-- 4x2 wave container -->
+            <table class="generate-results">
+              <tr>
+                <th colspan="5">
+                  Sample 2
+                </th>
+              </tr>
+              <tr>
+                <td colspan="5" style="text-align: left;">
+                  <p style="font-weight: bold; text-decoration: underline;">Narrative:</p>
+                  Ebonee thinks that Melanie is a miracle because she was born with a heart
+                  condition and wasn't expected to live. Now Ebonee thinks that Melanie is a great because she's defying
+                  the odds and doing so well.<br>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="5" style="text-align: left;">
+                  <p style="font-weight: bold; text-decoration: underline;">Behaviors:</p>
+                  <span style="display: inline-block; width: 70px; color: #D32F2F">Ebonee:</span> Verbosity
+                  (0), Filler Words (1), Backchannels (2), Interruptions (0)<br>
+                  <span style="display: inline-block; width: 70px; color: #1976D2">Melanie:</span> Verbosity
+                  (1), Filler Words (0), Backchannels (1), Interruptions (2)
+                </td>
+              </tr>
+              <tr>
+                <th>Ground Truth</th>
+                <th>Resynthesized</th>
+                <th>BeDLM (ours)</th>
+                <th>dGSLM</th>
+                <th>Cascaded</th>
+              </tr>
+              <tr>
+                <td class="inner">
+                  <!-- Waveform visualization for original speech -->
+                  <div id="cell_2_GT_waveform"></div>
+                  <button id="cell_2_GT" class="play-button-demo btn btn-primary"
+                    onclick="wavesurfersForBeDLM[2][0].playPause()">
+                    <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                  </button>
+                </td>
+                <td class="inner">
+                  <!-- Waveform visualization for original speech -->
+                  <div id="cell_2_Resynthesized_waveform"></div>
+                  <button id="cell_2_Resynthesized" class="play-button-demo btn btn-primary"
+                    onclick="wavesurfersForBeDLM[2][1].playPause()">
+                    <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                  </button>
+                </td>
+                <td class="inner">
+                  <!-- Waveform visualization for original speech -->
+                  <div id="cell_2_BeDLM_waveform"></div>
+                  <button id="cell_2_BeDLM" class="play-button-demo btn btn-primary"
+                    onclick="wavesurfersForBeDLM[2][2].playPause()">
+                    <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                  </button>
+                </td>
+                <td class="inner">
+                  <!-- Waveform visualization for original speech -->
+                  <div id="cell_2_dGSLM_waveform"></div>
+                  <button id="cell_2_dGSLM" class="play-button-demo btn btn-primary"
+                    onclick="wavesurfersForBeDLM[2][3].playPause()">
+                    <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                  </button>
+                </td>
+                <td class="inner">
+                  <!-- Waveform visualization for original speech -->
+                  <div id="cell_2_Cascaded_waveform"></div>
+                  <button id="cell_2_Cascaded" class="play-button-demo btn btn-primary"
+                    onclick="wavesurfersForBeDLM[2][4].playPause()">
+                    <i class="fa fa-play"></i>&nbsp;/&nbsp;<i class="fa fa-pause"></i>
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function createWaveSurfer(containerId, audioPath) {
+      const wavesurfer = WaveSurfer.create({
+        container: containerId,
+        splitChannels: true,
+        responsive: true,
+      });
+      wavesurfer.load(audioPath);
+      return wavesurfer;
+    }
+
+    var wavesurfersForBehaviorSD = [];
+    var wavesurfersForBeDLM = [];
+
+    var behaviorSDIds = [9, 2, 7, 8];
+    behaviorSDIds.forEach((id, idx) => {
+      wavesurfersForBehaviorSD.push(createWaveSurfer(`#cell_${idx}_original_waveform`, `static/audios/Behavior-SD_samples/${id}.wav`));
+    });
+
+    var names = ["GT", "Resynthesized", "BeDLM", "dGSLM", "Cascaded"];
+    var beDLMIds = [0, 1, 2];
+    beDLMIds.forEach((id, i) => {
+      wavesurfersForBeDLM.push([]);
+      names.forEach((name) => {
+        wavesurfersForBeDLM[i].push(
+          createWaveSurfer(`#cell_${i}_${name}_waveform`, `static/audios/BeDLM_samples/${id}/${name}.wav`)
+        );
+      });
+    });
+  </script>
+
+  <!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+  </section> -->
+  <!-- End BibTex citation -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project
+                Page Template</a>
+              which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the
+              source code of this website, we just ask that
+              you link back to this page in the footer. <br />
+              This website is licensed under a
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons
+                Attribution-ShareAlike 4.0
+                International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

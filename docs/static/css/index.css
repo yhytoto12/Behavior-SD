@@ -1,0 +1,222 @@
+body {
+    font-family: "Noto Sans", sans-serif;
+}
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+    font-variant: small-caps;
+}
+
+.teaser .hero-body {
+    padding-top: 0;
+    padding-bottom: 3rem;
+}
+
+.teaser {
+    font-family: "Google Sans", sans-serif;
+}
+
+.publication-title {
+}
+
+.publication-banner {
+    max-height: parent;
+}
+
+.publication-banner video {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: "Google Sans", sans-serif;
+}
+
+.publication-authors {
+    font-family: "Google Sans", sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+    color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+    display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+    /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+    overflow: hidden;
+}
+
+.results-carousel .item {
+    margin: 5px;
+    overflow: hidden;
+    padding: 20px;
+    font-size: 0;
+}
+
+.results-carousel video {
+    margin: 0;
+}
+
+.slider-pagination .slider-page {
+    background: #000000;
+}
+
+.eql-cntrb {
+    font-size: smaller;
+}
+
+.narrative {
+    font-size: 1rem; /* Adjust this size as needed */
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.behaviors-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.behaviors-list ul {
+    list-style-type: circle;
+    margin-left: 1rem;
+}
+
+.results-carousel .item {
+    padding: 24px;
+    margin: 24px 0;
+    /* background-color: #f5f5f5; */
+    border-radius: 24px;
+    font-size: 1rem;
+}
+
+/* Flex vertifcal */
+.wave-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    /* set child block interval */
+    gap: 12px;
+}
+
+.table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.generate-results {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    tr,
+    th,
+    td {
+        padding: 12px;
+        border: 1px solid black;
+        text-align: center;
+    }
+}
+
+.play-button-demo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    margin: 10px 0;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #4a90e2, #2c5282);
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    width: 120px;
+}
+
+.play-button-demo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(135deg, #5a9de2, #3c6292);
+}
+
+.play-button-demo:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 5px rgba(50, 50, 93, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.play-button-demo i {
+    margin: 0 5px;
+    font-size: 0.85rem;
+}
+
+/* 재생 중일 때 버튼 상태 (JavaScript로 .playing 클래스 토글) */
+.play-button-demo.playing {
+    background: linear-gradient(135deg, #34d399, #059669);
+}
