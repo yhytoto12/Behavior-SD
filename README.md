@@ -1,12 +1,21 @@
-# Behavior-SD
+# 🎙️ Behavior-SD
+
+Official repository for our **NAACL 2025** paper:  
+📄 <a href=""><b>Behavior-SD: Behaviorally Aware Spoken Dialogue Generation with Large Language Models</b></a>  
+🏆 **SAC Award Winner** in Speech Processing and Spoken Language Understanding
+
 ---
-This is the official repository for our NAACL 2025 paper:
-<a href=""><b>Behavior-SD: Behaviorally Aware Spoken Dialogue Generation with Large Language Models</b></a>
 
-- [Project Page](https://yhytoto12.github.io/Behavior-SD)
-- [Dataset (Coming Soon)]()
+## 🔗 Links
 
-Please cite our work if you found the resources in this repository useful:
+- 🌐 [**Project Page**](https://yhytoto12.github.io/Behavior-SD)
+- 📂 [**Dataset** (Coming Soon)]()
+
+---
+
+## 📌 Citation
+
+If you find our work useful, please consider citing us:
 
 ```bib
 @inproceedings{sehun@behaviorsd,
@@ -15,4 +24,3 @@ Please cite our work if you found the resources in this repository useful:
     booktitle={NAACL},
     year=2025
 }
-```
