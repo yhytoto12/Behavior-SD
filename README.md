@@ -7,7 +7,7 @@ Official repository for our **NAACL 2025** paper:
 
 ## 🔗 Links
 - 🌐 [**Project Page**](https://yhytoto12.github.io/Behavior-SD)
-- 📂 [**Dataset** (Coming Soon)](https://drive.google.com/drive/folders/1BUjqQvYDpUPAzAyM9zSg3Y3vc1HYjwd0?usp=sharing)
+- 🤗 [**Dataset** (Coming Soon)](https://huggingface.co/datasets/yhytoto12/behavior-sd)
 
 ## 📖 Overview
 We explores how to generate natural, behaviorally-rich spoken dialogues using large language models (LLMs).  
@@ -23,18 +23,7 @@ Unlike existing spoken dialogue datasets that neglect full-duplex dynamics (e.g.
 
 ## 📂 Dataset
 Behavior-SD provides large-scale, behavior-annotated spoken dialogues.
-
 - Data Structure
-```
-Behavior-SD/
-    ├── valid_ids.json
-    ├── {split}/      # train, validation, test
-        ├── audios/
-            ├── {soda_index:010d}/
-                ├── dialogue.wav
-                ├── meta_info.json
-```
-- `meta_info.json` contents
 ```JSON
 {
   "soda_split": "train",
