@@ -4,14 +4,12 @@ Official repository for our **NAACL 2025** paper:
 📄 <a href=""><b>Behavior-SD: Behaviorally Aware Spoken Dialogue Generation with Large Language Models</b></a>  
 🏆 **SAC Award Winner** in Speech Processing and Spoken Language Understanding
 
----
 
 ## 🔗 Links
 
 - 🌐 [**Project Page**](https://yhytoto12.github.io/Behavior-SD)
 - 📂 [**Dataset** (Coming Soon)]()
 
----
 
 ## 📌 Citation
 
