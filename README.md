@@ -7,7 +7,7 @@ Official repository for our **NAACL 2025** paper:
 
 ## 🔗 Links
 - 🌐 [**Project Page**](https://yhytoto12.github.io/Behavior-SD)
-- 🤗 [**Dataset** (Coming Soon)](https://huggingface.co/datasets/yhytoto12/behavior-sd)
+- 🤗 [**Dataset**](https://huggingface.co/datasets/yhytoto12/behavior-sd)
 
 ## 📖 Overview
 We explores how to generate natural, behaviorally-rich spoken dialogues using large language models (LLMs).  
