@@ -10,7 +10,7 @@ Official repository for our **NAACL 2025** paper:
 - 🤗 [**Dataset**](https://huggingface.co/datasets/yhytoto12/behavior-sd)
 
 ## 📖 Overview
-We explores how to generate natural, behaviorally-rich spoken dialogues using large language models (LLMs).  
+We explores how to generate natural, behaviorally-rich full-duplex spoken dialogues using large language models (LLMs).
 We introduce:
 - **Behavior-SD** Dataset: 108K full-duplex dialogues (2,164 hours) with rich speaker-wise behavioral annotations.  
 - **BeDLM**: A novel end-to-end LLM-based spoken dialogue generator conditioned on narrative and behavioral traits.  
@@ -23,6 +23,23 @@ Unlike existing spoken dialogue datasets that neglect full-duplex dynamics (e.g.
 
 ## 📂 Dataset
 Behavior-SD provides large-scale, behavior-annotated spoken dialogues.
+- Download from huggingface
+```python
+from datasets import load_dataset
+
+# Load the Behavior-SD dataset using streaming mode (recommended for large datasets)
+dataset = load_dataset(
+    "yhytoto12/behavior-sd",
+    split="train", # "validation" or "test"
+    streaming=True
+)
+
+# Example: Iterate over the dataset
+for i, example in enumerate(dataset):
+    print(example)
+    break
+```
+
 - Data Structure
 ```JSON
 {
@@ -69,9 +86,9 @@ Behavior annotations are provided at utterance and speaker levels, enabling fine
 If you find our work useful, please consider citing us:
 
 ```bib
-@inproceedings{sehun@behaviorsd,
+@inproceedings{lee-and-kim@behaviorsd,
   title     = {Behavior-SD: Behaviorally Aware Spoken Dialogue Generation with Large Language Models},
-  author    = {Sehun Lee and Kang-wook Kim and Gunhee Kim},
+  author    = {Sehun Lee, Kang-wook Kim, Gunhee Kim},
   booktitle = {Proceedings of the 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics},
   year      = {2025},
   url       = {https://aclanthology.org/2025.naacl-long.484/}
