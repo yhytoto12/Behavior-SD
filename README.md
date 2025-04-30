@@ -64,7 +64,6 @@ Behavior-SD provides large-scale, behavior-annotated spoken dialogues.
 Behavior annotations are provided at utterance and speaker levels, enabling fine-grained control and analysis.
 
 
-
 ## 📌 Citation
 
 If you find our work useful, please consider citing us:
@@ -74,7 +73,8 @@ If you find our work useful, please consider citing us:
   title     = {Behavior-SD: Behaviorally Aware Spoken Dialogue Generation with Large Language Models},
   author    = {Sehun Lee and Kang-wook Kim and Gunhee Kim},
   booktitle = {Proceedings of the 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics},
-  year      = {2025}
+  year      = {2025},
+  url       = {https://aclanthology.org/2025.naacl-long.484/}
 }
 ```
 
